@@ -542,3 +542,11 @@ function nonMutatingSort(arr) {
   });
 }
 nonMutatingSort(globalArray);
+
+// -----------------------------------------------------------
+
+// Split a String into an Array Using .split()
+function splitify(str) {
+  return str.split(/\W/);
+}
+splitify("Hello World,I-am code");
