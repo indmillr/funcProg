@@ -566,9 +566,27 @@ function urlSlug(title) {
   return title.toLowerCase().trim().split(/\s+/).join("-");
 }
 
-// Use .every() to check that every element in an array meets criteria
+// Use .every() to check that EVERY element in an array meets criteria
 function checkPositive(arr) {
   return arr.every(function (val) {
     return val > 0;
   });
 }
+
+// Use .some() to check that ANY element in an array meet a criteria
+function checkPositive(arr) {
+  return arr.some(function (val) {
+    return val > 0;
+  });
+}
+checkPositive([1, 2, 3, -4, 5]);
+
+// Currying and Partial Application
+function add(x) {
+  return function (y) {
+    return function (z) {
+      return x + y + z;
+    };
+  };
+}
+add(10)(20)(30);
