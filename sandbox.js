@@ -565,3 +565,10 @@ sentensify("May-the-force-be-with-you");
 function urlSlug(title) {
   return title.toLowerCase().trim().split(/\s+/).join("-");
 }
+
+// Use .every() to check that every element in an array meets criteria
+function checkPositive(arr) {
+  return arr.every(function (val) {
+    return val > 0;
+  });
+}
