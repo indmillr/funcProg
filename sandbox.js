@@ -516,8 +516,29 @@ console.log(getRating(watchList));
 
 // Use .map(), .filter(), and .reduce()
 const squareList = (arr) => {
-  return arr;
+  return arr
+    .filter((num) => num > 0 && num % parseInt(num) === 0)
+    .map((num) => Math.pow(num, 2));
 };
 
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
 console.log(squaredIntegers);
+
+// -----------------------------------------------------------
+
+// Sort an Array Alphabetically using .sort()
+function alphabeticalOrder(arr) {
+  return arr.sort(function (a, b) {
+    return a === b ? 0 : a < b ? -1 : 1;
+  });
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+
+// Return a Sorted Array without changing the original array
+const globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  return [].concat(arr).sort(function (a, b) {
+    return a - b;
+  });
+}
+nonMutatingSort(globalArray);
