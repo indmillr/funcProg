@@ -550,3 +550,11 @@ function splitify(str) {
   return str.split(/\W/);
 }
 splitify("Hello World,I-am code");
+
+// -----------------------------------------------------------
+
+// Combine an Arry into a String using .join()
+function sentensify(str) {
+  return str.split(/\W/).join(" ");
+}
+sentensify("May-the-force-be-with-you");
